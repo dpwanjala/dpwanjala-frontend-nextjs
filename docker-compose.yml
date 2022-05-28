@@ -1,0 +1,22 @@
+version: '3.4'
+
+networks:
+  web:
+    external: true
+
+services:
+  dpwanjala-frontend-nextjs:
+    image: node:14.16
+    command: bash -c "yarn run dev"
+    container_name: ${APP_NAME}
+    volumes:
+      - "$PWD:$PWD"
+    working_dir: $PWD
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.${APP_NAME}.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.${APP_NAME}.entrypoints=web"
+      - "traefik.docker.network=web"
+      - "traefik.http.services.${APP_NAME}.loadbalancer.server.port=${PORT}"
