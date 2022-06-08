@@ -37,7 +37,7 @@ export default function Example() {
                       </li>
                       <li>
                       <a
-                      href="https://drive.google.com/file/d/129AloutBrGwOUDL8_CBawkYAZUI_0J_n/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1Ma-L6xOcGh1gi3S5t7A8LPhqk-KXS-cJ/view?usp=sharing"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Resume
